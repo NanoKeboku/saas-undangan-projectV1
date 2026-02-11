@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+  /* Font Family */
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Custom Colors */
+  --color-brand-blue: #2159D4;   /* Stroke & Primary */
+  --color-brand-light: #99B9FF;  /* Background Active/Hover */
+  --color-brand-gray: #6B6B6B;   /* Font Secondary */
+  --color-brand-dark: #000000;   /* Font Primary */
+}
+
+@layer base {
+  body {
+    @apply font-poppins text-brand-dark;
+  }
+}
