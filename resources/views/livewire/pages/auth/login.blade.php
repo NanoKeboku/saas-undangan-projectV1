@@ -106,7 +106,7 @@
             <!-- Register -->
             <p class="mt-6 text-center text-sm text-gray-600">
                 Belum punya akun?
-                <a href="{{ route('register') }}" class="font-bold text-indigo-600 hover:text-indigo-500">
+                <a href="{{ route('register') }}" wire:navigate class="font-bold text-indigo-600 hover:text-indigo-500">
                     Daftar sekarang
                 </a>
             </p>
