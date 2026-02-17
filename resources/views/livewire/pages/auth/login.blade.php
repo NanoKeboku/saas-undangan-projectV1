@@ -1,41 +1,4 @@
-<?php
-use Livewire\Volt\Component;
 
-new class extends Component {
-
-    public $email = 'admin@gmail.com';
-    public $password = '123123123';
-    public $remember = false;
-
-    public function mount()
-    {
-        if (session('is_logged_in')) {
-            return redirect()->route('dashboard');
-        }
-    }
-
-    public function handleLogin()
-    {
-        $fake = config('fake-auth');
-
-        if (
-            $this->email === $fake['email'] &&
-            $this->password === $fake['password']
-        ) {
-            session(['is_logged_in' => true]);
-
-            return redirect()->route('dashboard');
-        }
-
-        $this->addError('email', 'Email atau password salah');
-    }
-
-    public function handleGoogleLogin()
-    {
-        $this->addError('email', 'Google Login belum diintegrasikan 😅');
-    }
-};
-?>
 
 <div class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
 
@@ -72,7 +35,7 @@ new class extends Component {
             </div>
 
             <!-- Form -->
-            <form wire:submit.prevent="handleLogin" class="space-y-5">
+            <form wire:submit.prevent="login" class="space-y-5">
 
                 @error('email')
                     <div class="p-3 text-sm text-red-600 bg-red-50 rounded-lg">
@@ -109,21 +72,21 @@ new class extends Component {
                 </div>
 
                 <!-- Submit -->
-                <button type="submit" wire:loading.attr="disabled" wire:target="handleLogin"
+                <button type="submit" wire:loading.attr="disabled" wire:target="login"
                     class="w-full py-4 rounded-2xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition flex items-center justify-center gap-2">
-                    <span wire:loading.remove wire:target="handleLogin">Sign In</span>
-                    <span wire:loading wire:target="handleLogin">Loading...</span>
+                    <span wire:loading.remove wire:target="login">Sign In</span>
+                    <span wire:loading wire:target="login">Loading...</span>
                 </button>
 
             </form>
 
             <!-- Register -->
-            <p class="mt-6 text-center text-sm text-gray-600">
+            {{-- <p class="mt-6 text-center text-sm text-gray-600">
                 Belum punya akun?
                 <a href="{{ route('register') }}" wire:navigate class="font-bold text-indigo-600 hover:text-indigo-500">
                     Daftar sekarang
                 </a>
-            </p>
+            </p> --}}
         </div>
 
         <!-- Footer -->
