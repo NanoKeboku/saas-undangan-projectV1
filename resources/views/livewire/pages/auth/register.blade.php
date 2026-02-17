@@ -87,7 +87,7 @@
 
             <p class="mt-6 text-center text-sm text-slate-600">
                 Already have an account?
-                <a href="{{ route('login') }}" class="font-bold text-indigo-600">Sign in</a>
+                <a href="{{ route('login') }}" wire:navigate class="font-bold text-indigo-600">Sign in</a>
             </p>
         </div>
 

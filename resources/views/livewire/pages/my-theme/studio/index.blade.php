@@ -153,7 +153,7 @@ public function isStepValid(): bool
             <div class="flex-1 overflow-y-auto">
                 <!-- Header -->
                 <div class="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4">
-                    <a href="{{ route('my-theme.template') }}" class="inline-flex items-center gap-2 text-sm text-purple-600 hover:text-purple-700 mb-4 font-semibold">
+                    <a href="{{ route('my-theme.template') }}" wire:navigate class="inline-flex items-center gap-2 text-sm text-purple-600 hover:text-purple-700 mb-4 font-semibold">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
