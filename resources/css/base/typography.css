@@ -1,0 +1,32 @@
+/* Import font dari Google Fonts (pastikan ini ada jika belum di-import di HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root {
+    /* Setup variabel biar gampang kalau mau ganti nanti */
+    --font-main: "Fredoka", sans-serif;
+}
+
+html, body {
+    font-family: var(--font-main);
+    font-optical-sizing: auto;
+    
+    /* Font variation settings untuk width default 100 */
+    font-variation-settings: "wdth" 100;
+    
+    /* Menghaluskan tampilan font di browser */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Warna default teks agar lebih enak dibaca */
+    color: #1a1a1a;
+}
+
+/* Pastikan input, button, dan select juga ikut pakai Fredoka */
+input, button, select, textarea {
+    font-family: var(--font-main);
+}
+
+/* Opsional: Atur ketebalan default untuk heading */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Atau semibold */
+}

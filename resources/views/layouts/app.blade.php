@@ -6,6 +6,9 @@
     <title>Weddstu Editor</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body class="antialiased bg-[#F8FAFC] font-['Poppins']">
     <div x-data="{ expanded: true, mobileOpen: false }" class="relative min-h-screen">
@@ -27,9 +30,9 @@
             </svg>
         </button>
 
-        <main :class="expanded ? 'lg:pl-80' : 'lg:pl-24'" 
+        <main :class="expanded ? '' : ''" 
               class="transition-all duration-500 ease-in-out min-h-screen">
-            <div class="p-8">
+            <div class="">
                 {{ $slot }}
             </div>
         </main>

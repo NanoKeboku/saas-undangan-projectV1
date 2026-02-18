@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Auth\Login;
+use App\Livewire\MyTheme\Studio;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
@@ -29,7 +30,7 @@ Route::middleware('fake.auth')->group(function () {
 
     Route::prefix('my-theme')->name('my-theme.')->group(function () {
         Volt::route('/template', 'pages.my-theme.template')->name('template');
-        Volt::route('/studio', 'pages.my-theme.studio')->name('studio.index');
+        Route::get('/studio', Studio::class)->name('studio.index');
     });
 
     Route::prefix('tamu')->name('tamu.')->group(function () {
