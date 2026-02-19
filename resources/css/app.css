@@ -45,4 +45,29 @@ input, button, select, textarea, span, a, h1, h2, h3, h4, h5, h6 {
   @apply font-fredoka; /* Ini kunci supaya form tidak balik ke font sistem */
   /* font-weight: 500; */
 }
+
+/* Custom Scrollbar Minimalist */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px; /* Sangat tipis */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Track transparan biar nggak ganggu */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0; /* Warna abu-abu soft (slate-200) */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1; /* Sedikit lebih gelap saat di-hover (slate-300) */
+}
+
+/* Khusus Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #e2e8f0 transparent;
+}
 }

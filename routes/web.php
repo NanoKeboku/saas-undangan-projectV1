@@ -28,6 +28,15 @@ Route::middleware('fake.auth')->group(function () {
 
     Volt::route('/dashboard', 'pages.dashboard')->name('dashboard');
 
+    // Profile
+    Volt::route('/profile', 'pages.profile')->name('profile');
+
+    // Package
+    Volt::route('/package', 'pages.package.index')->name('package.index');
+
+    // Settings
+    Volt::route('/settings', 'pages.settings')->name('settings');
+
     Route::prefix('my-theme')->name('my-theme.')->group(function () {
         Volt::route('/template', 'pages.my-theme.template')->name('template');
         Route::get('/studio', Studio::class)->name('studio.index');
