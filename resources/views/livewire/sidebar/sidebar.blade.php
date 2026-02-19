@@ -27,7 +27,7 @@
             @if(request()->routeIs('dashboard'))
                 <div class="absolute left-0 w-1.5 h-6 bg-[#2159D4] rounded-r-full"></div>
             @endif
-            <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
             <span x-show="expanded" x-transition.opacity class="whitespace-nowrap">My Event</span>
         </a>
 
@@ -41,14 +41,14 @@
                 <svg x-show="expanded" class="w-4 h-4 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div x-show="open && expanded" x-collapse class="mt-1 ml-11 space-y-1 border-l-2 border-[#99B9FF]/30">
-                <a href="{{ route('my-theme.template') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('my-theme.template') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Template</a>
-                <a href="{{ route('my-theme.studio.index') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('my-theme.studio.index') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Studio</a>
+                <a href="{{ route('my-theme.template') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('my-theme.template') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Template</a>
+                <a href="{{ route('my-theme.studio.index') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('my-theme.studio.index') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Studio</a>
             </div>
         </div>
 
         <div x-data="{ open: {{ request()->routeIs('tamu.*') ? 'true' : 'false' }} }">
             <button @click="expanded ? (open = !open) : (expanded = true, open = true)" 
-                class="w-full flex items-center justify-between px-5 py-4 rounded-2xl font-bold transition-all {{ request()->routeIs('tamu.*') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC]' }}">
+                class="w-full flex items-center justify-between px-5 py-4 rounded-2xl  transition-all {{ request()->routeIs('tamu.*') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC]' }}">
                 <div class="flex items-center gap-4">
                     <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     <span x-show="expanded" x-transition.opacity class="whitespace-nowrap">Tamu Undangan</span>
@@ -56,15 +56,15 @@
                 <svg x-show="expanded" class="w-4 h-4 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div x-show="open && expanded" x-collapse class="mt-1 ml-11 space-y-1 border-l-2 border-[#99B9FF]/30">
-                <a href="{{ route('tamu.index') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('tamu.index') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Daftar Tamu</a>
-                <a href="{{ route('tamu.rsvp') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('tamu.rsvp') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">RSVP</a>
-                <a href="{{ route('tamu.ucapan') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('tamu.ucapan') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Ucapan</a>
+                <a href="{{ route('tamu.index') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('tamu.index') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Daftar Tamu</a>
+                <a href="{{ route('tamu.rsvp') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('tamu.rsvp') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">RSVP</a>
+                <a href="{{ route('tamu.ucapan') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('tamu.ucapan') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Ucapan</a>
             </div>
         </div>
 
         <div x-data="{ open: {{ request()->routeIs('egift.*') ? 'true' : 'false' }} }">
             <button @click="expanded ? (open = !open) : (expanded = true, open = true)" 
-                class="w-full flex items-center justify-between px-5 py-4 rounded-2xl font-bold transition-all {{ request()->routeIs('egift.*') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC]' }}">
+                class="w-full flex items-center justify-between px-5 py-4 rounded-2xl  transition-all {{ request()->routeIs('egift.*') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC]' }}">
                 <div class="flex items-center gap-4">
                     <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <span x-show="expanded" x-transition.opacity class="whitespace-nowrap">E-Gift</span>
@@ -72,14 +72,14 @@
                 <svg x-show="expanded" class="w-4 h-4 transition-transform duration-300" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M19 9l-7 7-7-7"></path></svg>
             </button>
             <div x-show="open && expanded" x-collapse class="mt-1 ml-11 space-y-1 border-l-2 border-[#99B9FF]/30">
-                <a href="{{ route('egift.index') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('egift.index') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Daftar Gift</a>
-                <a href="{{ route('egift.setting') }}" wire:navigate class="block px-6 py-2 text-sm font-bold {{ request()->routeIs('egift.setting') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Setting</a>
+                <a href="{{ route('egift.index') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('egift.index') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Daftar Gift</a>
+                <a href="{{ route('egift.setting') }}" wire:navigate class="block px-6 py-2 text-sm  {{ request()->routeIs('egift.setting') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:text-black' }}">Setting</a>
             </div>
         </div>
 
         <div class="pt-4 border-t border-gray-50 mt-4">
             <a href="{{ route('transaction.index') }}" wire:navigate 
-               class="group relative flex items-center gap-4 px-5 py-4 rounded-2xl font-bold transition-all duration-300 {{ request()->routeIs('transaction.index') ? 'bg-[#99B9FF]/20 text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC] hover:text-black' }}">
+               class="group relative flex items-center gap-4 px-5 py-4 rounded-2xl  transition-all duration-300 {{ request()->routeIs('transaction.index') ? 'bg-[#99B9FF]/20 text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC] hover:text-black' }}">
                 @if(request()->routeIs('transaction.index'))
                     <div class="absolute left-0 w-1.5 h-6 bg-[#2159D4] rounded-r-full"></div>
                 @endif

@@ -1,11 +1,19 @@
 @import 'tailwindcss';
 
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
 @theme {
+
+  /* google font */
+  --font-fredoka: "Fredoka", sans-serif;
+
   /* Font Family */
   --font-poppins: "Poppins", sans-serif;
 
@@ -17,7 +25,24 @@
 }
 
 @layer base {
-  body {
-    @apply font-poppins text-brand-dark;
+:root {
+    /* Setup variabel biar gampang kalau mau ganti nanti */
+    --font-main: "Fredoka", sans-serif;
+}
+
+/* Pastikan input, button, dan select juga ikut pakai Fredoka */
+/* input, button, select, textarea {
+    font-family: var(--font-main);
+} */
+
+input, button, select, textarea, span, a, h1, h2, h3, h4, h5, h6 {
+    @apply font-fredoka; /* Ini kunci supaya form tidak balik ke font sistem */
+    font-weight: 500;
   }
+  
+  /* Opsional: Atur ketebalan default untuk heading */
+  p {
+  @apply font-fredoka; /* Ini kunci supaya form tidak balik ke font sistem */
+  /* font-weight: 500; */
+}
 }
