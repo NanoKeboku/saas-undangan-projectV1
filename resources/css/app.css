@@ -70,4 +70,8 @@ input, button, select, textarea, span, a, h1, h2, h3, h4, h5, h6 {
     scrollbar-width: thin;
     scrollbar-color: #e2e8f0 transparent;
 }
+
+[x-cloak] { 
+    display: none !important; 
+}
 }

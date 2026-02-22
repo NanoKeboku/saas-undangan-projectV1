@@ -37,6 +37,7 @@
         <div>
             <p x-show="expanded" class="px-5 mb-2 text-[10px] font-bold uppercase tracking-widest text-gray-400">Management</p>
             <div class="space-y-1">
+                
                 <div x-data="{ open: {{ request()->routeIs('my-theme.*') ? 'true' : 'false' }} }">
                     <button @click="expanded ? (open = !open) : (expanded = true, open = true)" 
                         class="w-full flex items-center justify-between px-5 py-3 rounded-2xl font-bold transition-all {{ request()->routeIs('my-theme.*') ? 'text-[#2159D4]' : 'text-[#6B6B6B] hover:bg-[#F8FAFC]' }}">
@@ -92,7 +93,7 @@
             </div>
         </div>
 
-<div>
+        <div>
             <p x-show="expanded" class="px-5 mb-2 text-[10px] font-bold uppercase tracking-widest text-gray-400">Settings & Help</p>
             <div class="space-y-1">
                 
