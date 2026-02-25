@@ -50,7 +50,8 @@ Route::middleware('fake.auth')->group(function () {
 
     Route::prefix('egift')->name('egift.')->group(function () {
         Volt::route('/index', 'pages.egift.index')->name('index');
-        Volt::route('/setting', 'pages.egift.setting')->name('setting');
+        Volt::route('/setting', 'pages.egift.setting')->name('settings');
+        Volt::route('/payout', 'pages.egift.payout')->name('payout');
     });
 
     Route::prefix('transaction')->name('transaction.')->group(function () {

@@ -94,43 +94,4 @@ class extends Component {
             </div>
         </div>
     </div>
-
-    <div class="relative overflow-hidden py-24 mt-12">
-        <div class="absolute inset-0 bg-[#0a0a1a] z-0">
-             <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse"></div>
-             <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-[128px] opacity-20 animate-pulse delay-1000"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="bg-gradient-to-r from-purple-600/80 to-blue-600/80 backdrop-blur-xl rounded-[40px] p-10 md:p-16 text-white shadow-2xl border border-white/10">
-                <h2 class="text-4xl font-black mb-12 text-center tracking-tighter">Apa yang Bisa Anda Lakukan?</h2>
-                
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div class="text-5xl mb-6">✨</div>
-                        <h3 class="text-xl font-black mb-3">Kustomisasi Penuh</h3>
-                        <p class="text-sm text-white/70 leading-relaxed">Ubah warna, font, dan layout sesuai preferensi Anda tanpa batas.</p>
-                    </div>
-                    
-                    <div class="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div class="text-5xl mb-6">📱</div>
-                        <h3 class="text-xl font-black mb-3">Mobile Optimized</h3>
-                        <p class="text-sm text-white/70 leading-relaxed">Tampil sempurna di semua perangkat. Tamu bisa buka dari HP dengan lancar.</p>
-                    </div>
-                    
-                    <div class="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                        <div class="text-5xl mb-6">🚀</div>
-                        <h3 class="text-xl font-black mb-3">Instan & Cepat</h3>
-                        <p class="text-sm text-white/70 leading-relaxed">Publish undangan dalam hitungan menit. Share link ke tamu Anda langsung.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <p class="text-gray-400 font-medium italic">
-                    💡 Tip: Semua perubahan dapat diedit setelah dipublikasikan. Jadi, coba saja!
-                </p>
-            </div>
-        </div>
-    </div>
 </div>
