@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InvitationController;
 use App\Livewire\Auth\Login;
 use App\Livewire\MyTheme\Studio;
 use Illuminate\Support\Facades\Auth;
@@ -72,3 +73,9 @@ Route::middleware('fake.auth')->group(function () {
     })->name('logout');
 
 });
+
+// Preview wrapper (dengan sidebar)
+Route::get('/template/preview/{id}', [InvitationController::class, 'preview'])->name('template.preview');
+
+// Render konten undangan murni (dipanggil oleh iframe)
+Route::get('/template/render/{id}', [InvitationController::class, 'render'])->name('template.render');

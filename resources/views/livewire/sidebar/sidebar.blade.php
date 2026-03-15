@@ -1,22 +1,19 @@
 <aside 
     :class="{ 'w-80': expanded, 'w-24': !expanded, 'translate-x-0': mobileOpen, '-translate-x-full lg:translate-x-0': !mobileOpen }"
-    class="fixed left-0 top-0 h-screen bg-white border-r border-gray-100 flex flex-col p-6 transition-all duration-500 ease-in-out z-50 overflow-hidden shadow-[20px_0_40px_rgba(0,0,0,0.02)]">
+    class="fixed top-0 left-0 h-screen z-[60] transition-all duration-500 ease-in-out bg-white border-r border-gray-100 flex flex-col overflow-hidden shadow-[20px_0_40px_rgba(0,0,0,0.02)]">
     
-    <div class="mb-8 flex items-center h-14 shrink-0">
-        <div :class="expanded ? 'px-2 w-full' : 'w-full flex justify-center'">
-            <div class="flex items-center gap-4 py-4 bg-[#F8FAFC] border border-[#2159D4]/10 rounded-2xl justify-center min-w-[60px]">
-                <div class="w-8 h-8 bg-[#2159D4] rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-[#2159D4]/20">
-                    <span class="text-white font-black text-sm">W</span>
-                </div>
-                <h1 x-show="expanded" x-transition.opacity.duration.300ms class="text-lg font-black text-[#000000] tracking-tight whitespace-nowrap">
-                    WEDD<span class="text-[#2159D4]">STU</span>
-                </h1>
+    <div class="mb-8 flex items-center h-16 shrink-0 mt-4 px-4">
+        <div class="flex items-center gap-4 py-4 bg-[#F8FAFC] border border-[#2159D4]/10 rounded-2xl justify-center w-full">
+            <div class="w-8 h-8 bg-[#2159D4] rounded-xl flex items-center justify-center shrink-0">
+                <span class="text-white font-black text-sm">W</span>
             </div>
+            <h1 x-show="expanded" class="text-lg font-black text-black tracking-tight whitespace-nowrap">
+                WEDD<span class="text-[#2159D4]">STU</span>
+            </h1>
         </div>
     </div>
 
     <nav class="flex-1 space-y-6 overflow-y-auto custom-scrollbar overflow-x-hidden pr-2">
-        
         <div>
             <p x-show="expanded" class="px-5 mb-2 text-[10px] uppercase tracking-widest text-gray-400">Main Menu</p>
             <div class="space-y-1">
@@ -114,7 +111,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                     <div x-show="expanded" x-transition.opacity class="flex flex-col leading-tight">
-                        <span class=  whitespace-nowrap">Settings</span>
+                        <span class= " whitespace-nowrap">Settings</span>
                         <span class="text-[11px] font-medium opacity-70">Preferences</span>
                     </div>
                 </a>
@@ -126,7 +123,7 @@
                     @endif
                     <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                     <div x-show="expanded" x-transition.opacity class="flex flex-col leading-tight">
-                        <span class=  whitespace-nowrap">Transaction</span>
+                        <span class= " whitespace-nowrap">Transaction</span>
                         <span class="text-[11px] font-medium opacity-70">Riwayat pembayaran</span>
                     </div>
                 </a>
@@ -136,7 +133,7 @@
                         <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <div x-show="expanded" x-transition.opacity class="flex flex-col leading-tight">
-                        <span class=  text-sm">Help & Support</span>
+                        <span class= " text-sm">Help & Support</span>
                         <span class="text-[11px] font-medium opacity-70">Pusat bantuan</span>
                     </div>
                 </a>
@@ -145,8 +142,7 @@
     </nav>
 
     <div class="mt-auto pt-6 border-t border-gray-100 shrink-0">
-        <a href="{{ route('logout') }}" wire:navigate 
-           class="w-full group flex items-center gap-4 px-5 py-4 rounded-2xl text-[#6B6B6B] hover:text-red-600 hover:bg-red-50 transition-all duration-300">
+        <a href="{{ route('logout') }}"            class="w-full group flex items-center gap-4 px-5 py-4 rounded-2xl text-[#6B6B6B] hover:text-red-600 hover:bg-red-50 transition-all duration-300">
             <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-red-100 transition-colors shrink-0">
                 <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
             </div>

@@ -1,0 +1,242 @@
+
+
+/* FONT */
+@font-face /*perintah untuk memanggil font eksternal*/
+        {
+            font-family: 'manrope'; /*memberikan nama bebas untuk font*/
+            src: url('../font/manrope.ttf');/*memanggil file font eksternalnya di folder nexa*/
+        }
+*{
+    font-family: 'manrope', sans-serif;
+}
+
+/* COLOR */
+.bg-primary {
+    background-color: #3d5af1;
+    color: #3d5af1;
+}
+.bg-main{
+    background-color: #2C5D63;
+}
+.bg-blue3{
+    background-color: #3d5af1;
+}
+.text-blue{
+    color: #3d5af1;
+}
+.bd-dark {
+    background-color: #0e153a;
+}
+.bd-dark-2 {
+    background-color: #0e153a;
+}
+/* BUTTON */
+.btn-dark {
+    background-color: #0e153a;
+    color: #fff;
+}
+.btn {
+    border-radius: 14px;
+}
+.btn-green{
+    background: linear-gradient(90deg, rgba(169,197,47,1) 0%, rgba(201,234,60,1) 100%);
+    color: #fff;
+    
+}
+.btn-blue2{
+    background-color: #22d1ee;
+    color: #fff;
+}
+
+/* Navbar main */
+.bg-blue{
+    background-color: rgba(34, 209, 238, .50);
+    backdrop-filter: blur(10px);
+}
+
+/* login style */
+.bg-white {
+    background-color: #F8F8F8;
+}
+.ls-1{
+    letter-spacing: 2px;
+}
+/* .loginTwo form{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: -5px 5px 0px #3d5af1;
+} */
+.loginTwo input[type=text], [type=password],[type=email]{
+    border-radius: 10px;
+    border: 1px solid #3d5af1;
+    background-color: #ffffff;
+}
+.penduduk input[type=text], [type=date]{
+    border-radius: 10px;
+    border: 1px solid #3d5af1;
+    background-color: #ffffff;
+}
+
+.catat input[type=text],[type=date]{
+    border-radius: 10px;
+    border: 1px solid #3d5af1;
+    background-color: #ffffff;
+}
+.lpj input[type=text],[type=date]{
+    border-radius: 10px;
+    border: 1px solid #3d5af1;
+    background-color: #ffffff;
+}
+.custom input[type=text], [type=file]{
+    border-radius: 10px;
+    border: 1px solid #3d5af1;
+    background-color: #ffffff;
+}
+
+/* outline */
+.outline-1{
+    border: 5px solid #fff;
+}
+/* dashboard */
+.content-1{
+    border-radius: 20px;
+}
+
+/* garis */
+.line {
+    border-bottom: 3px solid #3d5af1;
+    border-radius: 10px;
+    margin-right: 90px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.shadow-1 {
+    box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.301);
+}
+
+/* LANDING PAGE */
+*{
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 768px){
+    .logo-ins {
+        width: 250px;
+        margin: auto 65px;
+    }
+}
+#index .size-1 {
+    width: 250px;
+}
+.main_index input[type=text]{
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+}
+
+/* logo login */
+.logo-ins {
+    width: 250px;
+}
+
+
+/* font */
+.fs-7 {
+    font-size: 12px;
+}
+/* pengumuman */
+/* .main_index .pengumuman {
+
+} */
+
+
+ #main_index {
+    overflow-x: hidden;
+    }
+    /* membuat container atau wadah dari scrollbar dengan lebar 20px  */
+    ::-webkit-scrollbar {
+      width: 18px;
+      background-color: transparent;
+    }
+
+    /* membuat background dari scrollbar */
+    /* kasih warna transparan agar lebih estetik  */
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+  
+    /* membuat styling pada batang atau bar scrollbar  */
+    /* kita beri warna abu tua dengan lengkungan di sisi atas dan bawahnya  */
+    ::-webkit-scrollbar-thumb {
+      background-color: #3d5af1;
+      border-radius: 10px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+
+    /* warna akan berubah menjadi abu mudah saat kursor diarahkan  */
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #22d1ee;
+    }
+    .content-2{
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    }
+    .card-2 {
+        background-color : #fff;
+    }
+    .btn-green{
+        background-color: #00ec20;
+        color: #fff;
+    }
+    .pengumuman {
+        height: auto;
+        background-image: url('../img/bg-water-2.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: relative;
+        background-position-y: -380px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .pengumuman {
+            height: auto;
+            background-image: url('../img/bg-water-2.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: relative;
+            background-position-y: -250px;
+        }
+        
+
+        /* .card-2 h1 {
+            font-size: 12px;
+        }
+        .card-2 p {
+            font-size: 10px;
+        } */
+        .img-profil {
+        background-image: url('../img/air.jpg');
+        background-size: cover;
+        border-radius: 40px 0px 40px 0px; 
+        height: 400px;
+        box-shadow: -10px 10px 0px #3d5af1;
+        padding:30px;
+        }
+    }
+
+    textarea {
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+    .img-profil {
+        background-image: url('../img/air.jpg');
+        background-size: cover;
+        border-radius: 40px 0px 40px 0px; 
+        height: 400px;
+        box-shadow: -10px 10px 0px #3d5af1;
+    }

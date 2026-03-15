@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weddstu Editor</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @livewireStyles
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,9 +26,8 @@
 
     </style>
 </head>
-<body class="antialiased bg-[#F8FAFC] font-['Poppins']">
-    <div x-data="{ expanded: true, mobileOpen: false }" x-cloak class="relative min-h-screen">
-        
+<body class="antialiased bg-[#F8FAFC] font-['Poppins']" x-data="{ expanded: true, mobileOpen: false }">
+    <div class="relative min-h-screen">
         @include('livewire.sidebar.sidebar')
 
         <header 

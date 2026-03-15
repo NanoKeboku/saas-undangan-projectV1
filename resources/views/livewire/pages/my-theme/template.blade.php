@@ -39,11 +39,16 @@ class extends Component {
         ],
     ];
 
-    public function selectTemplate($templateId)
-    {
+    // Di dalam class Volt kamu
+public function selectTemplate($templateId){
+    // Cek apakah ID valid
+    $exists = collect($this->templates)->contains('id', $templateId);
+    
+    if($exists) {
         session()->put('selected_template', $templateId);
-        return redirect()->route('my-theme.studio');
+        return redirect()->route('template.preview', ['id' => $templateId]);
     }
+}
 }; ?>
 
 <div class="min-h-screen bg-[#F8FAFC]">
@@ -61,7 +66,7 @@ class extends Component {
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 @foreach($templates as $template)
-                    <div class="group cursor-pointer" wire:click="selectTemplate({{ $template['id'] }})">
+                    <div class="group">
                         <div class="bg-white rounded-[32px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
                             <div class="relative h-56 overflow-hidden bg-gray-200">
                                 <img src="{{ $template['image'] }}" alt="{{ $template['name'] }}"
@@ -83,10 +88,20 @@ class extends Component {
                                     @endforeach
                                 </div>
 
-                                <button class="w-full py-4 rounded-2xl font-black text-white transition-all duration-300 shadow-md group-hover:shadow-lg"
-                                        style="background: linear-gradient(135deg, {{ $template['color'] }} 0%, {{ $template['color'] }}dd 100%)">
+                               <button 
+                                type="button" 
+                                wire:click="selectTemplate({{ $template['id'] }})"
+                                wire:loading.attr="disabled"
+                                class="w-full py-4 rounded-2xl font-black text-white transition-all duration-300 shadow-md group-hover:shadow-lg cursor-pointer disabled:opacity-50"
+                                style="background: linear-gradient(135deg, {{ $template['color'] }} 0%, {{ $template['color'] }}dd 100%)">
+                                
+                                <span wire:loading.remove wire:target="selectTemplate">
                                     Pilih Template
-                                </button>
+                                </span>
+                                <span wire:loading wire:target="selectTemplate">
+                                    Memproses...
+                                </span>
+                            </button>
                             </div>
                         </div>
                     </div>

@@ -13,8 +13,13 @@
         formatDate(dateStr) {
             if (!dateStr) return 'Segera Ditentukan';
             const date = new Date(dateStr);
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            return date.toLocaleDateString('id-ID', options);
+            return date.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        },
+
+        hexToRgb(hex) {
+            if (!hex) return '0,0,0';
+            hex = hex.replace('#', '');
+            return parseInt(hex.substring(0,2),16) + ',' + parseInt(hex.substring(2,4),16) + ',' + parseInt(hex.substring(4,6),16);
         }
      }"
      :key="'preview-' + bride + '-' + theme_color">
@@ -134,7 +139,7 @@
                 <div class="grid grid-cols-2 gap-4">
                     <template x-for="(img, index) in gallery.slice(0, 4)" :key="index">
                         <div class="rounded-2xl overflow-hidden h-32 bg-gray-200">
-                            <img :src="img.temp_path || 'https://via.placeholder.com/200'" 
+                            <img :src="img.data_url || img.temp_path || 'https://placehold.co/200'" 
                                  alt="Gallery" 
                                  class="w-full h-full object-cover">
                         </div>
@@ -169,21 +174,4 @@
     </div>
 </div>
 
-@push('scripts')
-<script>
-function hexToRgb(hex) {
-    // Convert hex to RGB for rgba() usage
-    if (!hex) return '0,0,0';
-    
-    // Remove # if present
-    hex = hex.replace('#', '');
-    
-    // Parse hex values
-    const r = parseInt(hex.substring(0, 2), 16);
-    const g = parseInt(hex.substring(2, 4), 16);
-    const b = parseInt(hex.substring(4, 6), 16);
-    
-    return `${r}, ${g}, ${b}`;
-}
-</script>
-@endpush
+

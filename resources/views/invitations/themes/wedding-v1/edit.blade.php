@@ -1,4 +1,4 @@
-@extends('../layouts/admin')
+@extends('./layouts/admin')
 
 @section('mainLayout')
     <h1 class="mt-4">Edit Pesan</h1>
